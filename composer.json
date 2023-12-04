@@ -1,0 +1,46 @@
+{
+    "name": "murilochianfa/laravel-auto-optimizer",
+    "description": "Auto optimize your Laravel application in specific environments.",
+    "homepage": "https://github.com/MuriloChianfa/laravel-auto-optimizer",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MuriloChianfa",
+            "email": "murilo.chianfa@outlook.com",
+            "homepage": "https://github.com/MuriloChianfa",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0 | ^10.0 | ^11.0",
+        "illuminate/console": "^9.0 | ^10.0 | ^11.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "MuriloChianfa\\LaravelAutoOptimizer\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MuriloChianfa\\LaravelAutoOptimizer\\AutoOptimizerServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "style": [
+            "vendor/bin/phpcs --cache -p --ignore=*/vendor/* --error-severity=1 --warning-severity=8 --report=full --report=source -s --tab-width=4 --standard=PSR12 *"
+        ]
+    }
+}
