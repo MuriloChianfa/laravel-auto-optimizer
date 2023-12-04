@@ -35,6 +35,7 @@ final class AutoOptimizer
             return;
         }
 
+        // Speedup application startup
         if (config('auto-optimizer.cache')) {
             self::$lock = self::LOCK_PATH . config('app.env');
 
