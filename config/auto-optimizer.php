@@ -10,11 +10,11 @@ return [
     | Notice: use this only in production environments, you
     | can revert the cache manually running config:clear.
     |
-    | Default: "false"
+    | Default: "true"
     |
     */
 
-    'cache' => env('APP_PRODUCTION_READY', false),
+    'cache' => env('APP_PRODUCTION_READY', true),
 
     /*
     |--------------------------------------------------------------------------
